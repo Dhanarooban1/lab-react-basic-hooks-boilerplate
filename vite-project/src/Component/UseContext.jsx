@@ -13,14 +13,18 @@ function UseContext(){
     }
 
 
-
+    const handleClick = () => {
+      alert('Button is clicked');
+      setShow(!showContent);
+     };
+     
   return(
     <>
     
      <div style={themeStyle}>
      {showContent && <p>This is made by Dhana Rooban</p>} 
       <p>{state}</p> 
-      <button onClick={()=>setShow(!showContent)}>View</button>
+      <button onClick={()=>{handleClick();setShow(!showContent)}}>View</button>
       <button onClick={()=>{ setState(state+1)} }>Click  to like</button>
     </div>
     </>
